@@ -4,7 +4,8 @@ import Image from 'next/image'
 import About from '@/components/About'
 import Header from '@/components/Header'
 import Welcome from '@/components/Welcome'
-import { responsivePadding } from '@/utils/constants'
+import { maxWidthContent, responsivePadding } from '@/utils/constants'
+import Experience from '@/components/Experience'
 
 export default function Home() {
 
@@ -13,16 +14,18 @@ export default function Home() {
 
       <Header />
 
-      <div className={responsivePadding}>
+      <div className={`${responsivePadding + ' '+ maxWidthContent}`}>
 
         <Welcome />
 
         <About />
 
+        <Experience />
+
       </div>
       
       <button
-      className='bg-green-water rounded-full w-14 h-14 md:hidden absolute bottom-10 right-10'
+      className='bg-green-water sticky rounded-full w-14 h-14 md:hidden float-right bottom-10 right-10'
       >
         Veol
         </button>

@@ -8,7 +8,7 @@ const tektur = localFont({ src: '../../public/fonts/Tektur-VariableFont_wdth,wgh
 
 export default function Welcome() {
     return (
-        <div className="md:flex flex-row justify-between items-center max-w-7xl mx-auto mt-20 sm:mt-30">
+        <div id="Home" className="md:flex flex-row justify-between items-center mt-20 sm:mt-30">
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
