@@ -8,7 +8,7 @@ const tektur = localFont({ src: '../../public/fonts/Tektur-VariableFont_wdth,wgh
 
 export default function Welcome() {
     return (
-        <div id="Home" className="md:flex flex-row justify-between items-center mt-20 sm:mt-30 max-w-7xl mx-auto">
+        <div id="Home" className="md:flex flex-row justify-between items-center mt-16 sm:mt-30 ">
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -46,7 +46,7 @@ export default function Welcome() {
                 }}
                 className=" mt-10 md:mt-0"
             >
-                <Image src={'/bg-image.png'} alt="Tadeu's 3d Cartoon" width={350} height={500} className="mx-auto" />
+                <Image src={'/bg-image.png'} alt="Tadeu's 3d Cartoon" width={320} height={500} className="mx-auto w-[220px] sm:w-[280px] md:w-[320]" />
             </motion.div>
         </div>
     )
