@@ -35,7 +35,7 @@ export default function Header() {
                         <li className={`${navLinkHover}`}><a href="#about">Experience</a></li>
                         <li className={`${navLinkHover}`}><a href="#about">Projects</a></li>
                     </ul>
-                    <button className=" bg-green-water py-3 px-5 rounded text-black font-bold">Let's talk</button>
+                    <button className=" bg-green-water py-3 px-5 rounded text-black font-bold">{`Let's talk`}</button>
 
                 </motion.nav>
             </div>
