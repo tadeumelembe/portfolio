@@ -6,11 +6,12 @@ import Header from '@/components/Header'
 import Welcome from '@/components/Welcome'
 import { maxWidthContent, responsivePadding } from '@/utils/constants'
 import Experience from '@/components/Experience'
+import Projects from '@/components/Projects'
 
 export default function Home() {
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen mb-5 text-white-light">
 
       <Header />
 
@@ -21,6 +22,8 @@ export default function Home() {
         <About />
 
         <Experience />
+
+        <Projects />
 
       </div>
       
