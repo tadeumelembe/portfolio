@@ -23,7 +23,7 @@ export default function Welcome() {
                     <h1 className={`text-5xl sm:text-6xl  font-bold uppercase sm:text-left text-center text-gray-300 ${tektur.className}`}>
                         {`Hi, I'm`}
                         <br />
-                        <spam className="text-green-water">Tadeu Melembe</spam>
+                        <span className="text-green-water">Tadeu Melembe</span>
                     </h1>
                     <p className="text-lg mt-7 hidden sm:inline-block">
                         {`I'm a`} <span className=" text-green-water">Software Engineer</span> focused on building mobile and web solutions that solve real life problems.
