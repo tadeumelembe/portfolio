@@ -1,5 +1,8 @@
 'use client'
+import { userData } from "@/utils/constants";
 import localFont from "next/font/local";
+import Title from "./TitleComponent";
+import BorderSeparetor from "./BorderSeparator";
 
 const tektur = localFont({ src: '../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
 
@@ -9,32 +12,40 @@ const yearsOfExperience = currentYear - 2021
 export default function Experience() {
     return (
         <div>
-            <div className="flex flex-row justify-between gap-24 mt-40 items-center">
-                <div className="w-1/2 pr-10">
-                    <h2 className={`${tektur.className} font-bold text-3xl`}>Experience</h2>
-                </div>
-                <div className="w-1/2">
-                    <div className=" border-t-4 border-green-water w-full" />
-                </div>
 
-            </div>
-            <div className="flex flex-row justify-between gap-5 mt-4 items-start">
-                <div className="w-1/2 pr-10">
-                    <p className="mt-10 font-semibold text-green-water">
-                        {`<>`}
-                        <br />
-                        {`Sometimes I feel like a "Super Heroe", and my skills are my "Super Power". I can use them to create solutions that can impact society and change people's life, making it better and easier.`}
-                        <br />
-                        {`</>`}
-                    </p>
-                </div>
-                <div className="w-1/2">
-                    <p className="mt-10">
-                      {`I'm`} a <span className="text-green-water">software engineer</span> with {yearsOfExperience} years of experience, focused on <span className="text-green-water">Mobile Development</span> using React Native, and Full-Stack development using Reactjs, and Nodejs.
-                        </p>
-                </div>
+            <Title title="Experience" />
 
-            </div>
+            {userData.experiemce.map((element, index) => {
+                return (
+                    <>
+                        <div key={index} className="sm:flex flex-row justify-between gap-5 mt-10 items-center">
+
+                            <div className="md:flex flex-row gap-24 items-center justify-between">
+                                <div>
+                                    <p className="font-medium text-gray-400 mb-1">
+                                        {element.start_date + ' ' + element.end_date}
+                                    </p>
+                                    <h6 className="text-green-water font-semibold">{element.company}</h6>
+                                </div>
+                                <div>
+                                    <h6 className="md:mt-0 mt-2 font-semibold">{element.position}</h6>
+                                </div>
+                            </div>
+
+                            <div className="sm:w-1/2">
+                                <p className="font-semibold text-gray-300 mt-10 sm:mt-0">
+                                    Lorem ipsum dolor sit amet consectetur. Euismod nunc neque metus diam id at. Hac turpis proin eget.
+                                </p>
+                            </div>
+
+                        </div>
+                        {(index < userData.experiemce.length - 1) &&
+                            <BorderSeparetor />
+                        }
+                    </>
+                )
+
+            })}
         </div>
     )
 }
