@@ -8,7 +8,7 @@ const tektur = localFont({ src: '../../public/fonts/Tektur-VariableFont_wdth,wgh
 
 export default function Welcome() {
     return (
-        <div id="Home" className="md:flex flex-row justify-between items-center mt-20 sm:mt-30">
+        <div id="Home" className="md:flex flex-row justify-between items-center mt-20 sm:mt-30 max-w-7xl mx-auto">
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -28,13 +28,13 @@ export default function Welcome() {
                     <p className="text-lg mt-7 hidden sm:inline-block">
                         {`I'm a`} <span className=" text-green-water">Software Engineer</span> focused on building mobile and web solutions that solve real life problems.
                     </p>
-                    <div className="hidden">
-                    <SocialIcon bgColor="#708DB600" fgColor="#708DB6" url="https://github.com/tadeumelembe" />
-                    <SocialIcon bgColor="#708DB600" fgColor="#708DB6" url="https://www.linkedin.com/in/tadeumelembe" />
-                    <SocialIcon bgColor="#708DB600" fgColor="#708DB6" url="https://www.instagram.com/code._daily/" />
-                    </div>
+                   
                 </div>
-
+                <div className="mt-4 ml-[-12px] hidden md:inline-block">
+                    <SocialIcon bgColor="#708DB600" fgColor="#708DB6" target="_blank" url="https://github.com/tadeumelembe" />
+                    <SocialIcon bgColor="#708DB600" fgColor="#708DB6" target="_blank" url="https://www.linkedin.com/in/tadeumelembe" />
+                    <SocialIcon bgColor="#708DB600" fgColor="#708DB6" target="_blank" url="https://www.instagram.com/code._daily/" />
+                    </div>
             </motion.div>
 
             <motion.div
@@ -44,9 +44,9 @@ export default function Welcome() {
                     duration: 0.7,
                     delay: 0.5,
                 }}
-                className="items-center justify-center text-center mt-5"
+                className=" mt-10 md:mt-0"
             >
-                <Image src={'/bg-image.png'} alt="Tadeu's 3d Cartoon" width={600} height={600} className="mx-auto" />
+                <Image src={'/bg-image.png'} alt="Tadeu's 3d Cartoon" width={350} height={500} className="mx-auto" />
             </motion.div>
         </div>
     )
