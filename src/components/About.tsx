@@ -1,6 +1,7 @@
 'use client'
 import localFont from "next/font/local";
 import Title from "./TitleComponent";
+import { maxWidthContent } from "@/utils/constants";
 
 const tektur = localFont({ src: '../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
 
@@ -9,7 +10,7 @@ const yearsOfExperience = currentYear - 2021
 
 export default function About() {
     return (
-        <div id="about" className={`text-lg`}>
+        <div id="about" className={`text-lg ${maxWidthContent}`}>
           <Title title="About" />
             <div className="lg:flex flex-row justify-between gap-10 mt-4 items-start">
                 <div className="lg:w-1/2 md:pr-20">

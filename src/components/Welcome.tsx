@@ -3,12 +3,13 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import localFont from "next/font/local";
 import { SocialIcon } from 'react-social-icons';
+import { maxWidthContent } from "@/utils/constants";
 
 const tektur = localFont({ src: '../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
 
 export default function Welcome() {
     return (
-        <div id="Home" className="md:flex flex-row justify-between items-center mt-16 sm:mt-30 max-w-7xl mx-auto ">
+        <div id="home" className={`md:flex flex-row justify-between items-center mt-16 sm:mt-30`}>
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}

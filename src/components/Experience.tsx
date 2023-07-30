@@ -1,5 +1,5 @@
 'use client'
-import { userData } from "@/utils/constants";
+import { maxWidthContent, userData } from "@/utils/constants";
 import localFont from "next/font/local";
 import Title from "./TitleComponent";
 import BorderSeparetor from "./BorderSeparator";
@@ -11,7 +11,7 @@ const yearsOfExperience = currentYear - 2021
 
 export default function Experience() {
     return (
-        <div>
+        <div id="experience" className={`${maxWidthContent}`}>
 
             <Title title="Experience" />
 

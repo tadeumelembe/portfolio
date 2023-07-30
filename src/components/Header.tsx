@@ -20,7 +20,9 @@ export default function Header() {
                     }}
                     className=" mx-auto md:mx-0"
                 >
+                    <a href="#home">
                     <Image src="/logo.svg" alt="logo" width={45} height={45} />
+                    </a>
                 </motion.div>
 
                 <motion.nav
@@ -32,8 +34,8 @@ export default function Header() {
                     className="md:flex flex-row gap-7 items-center hidden">
                     <ul className={`flex flex-row gap-7 text-lg font-medium tracking-wide ${tektur.className}`}>
                         <li className={`${navLinkHover}`}><a href="#about">About</a></li>
-                        <li className={`${navLinkHover}`}><a href="#about">Experience</a></li>
-                        <li className={`${navLinkHover}`}><a href="#about">Projects</a></li>
+                        <li className={`${navLinkHover}`}><a href="#experience">Experience</a></li>
+                        <li className={`${navLinkHover}`}><a href="#projects">Projects</a></li>
                     </ul>
                     <button className=" bg-green-water py-3 px-5 rounded text-black font-bold">{`Let's talk`}</button>
 

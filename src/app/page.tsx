@@ -15,7 +15,7 @@ export default function Home() {
 
       <Header />
 
-      <div className={`${responsivePadding + ' '+ maxWidthContent}`}>
+      <div className="px-10 md:px-20 [1330px]:px-0 max-w-[1366px] mx-auto">
 
         <Welcome />
 
@@ -23,15 +23,15 @@ export default function Home() {
 
         <Experience />
 
-        <Projects />
-
       </div>
-      
+
+      <Projects />
+
       <button
-      className='bg-green-water sticky rounded-full w-14 h-14 md:hidden float-right bottom-10 right-10'
+        className='bg-green-water sticky rounded-full w-14 h-14 md:hidden float-right bottom-10 right-10'
       >
         Veol
-        </button>
+      </button>
 
     </main>
   )

@@ -1,5 +1,5 @@
 export const responsivePadding = 'px-10 xl:px-20 [1330px]:px-0'
-export const maxWidthContent = 'max-w-7xl mx-auto'
+export const maxWidthContent = `max-w-7xl mx-auto`
 export const userData = {
     "first_name": 'Tadeu',
     "last_name": "Melembe",
@@ -24,6 +24,10 @@ export const userData = {
     "projects": [
         {
             "name": "Recipe-Reels",
+            "description": ""
+        },
+        {
+            "name": "Reservajá",
             "description": ""
         }
     ]
