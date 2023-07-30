@@ -29,7 +29,7 @@ export default function Projects() {
                     }
 
                     return (
-                        <div className={`${paddingSide} px-10 sm:px-0`}>
+                        <div key={index} className={`${paddingSide} px-10 sm:px-0`}>
                             <div key={index} className={`${reverseFlex} justify-between gap-10 mt-16 items-start`}>
 
                                 <div className="sm:w-1/2">
