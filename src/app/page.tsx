@@ -14,7 +14,7 @@ import { Drawer, useDrawer } from '@/components/Drawer'
 export default function Home() {
   const [showDrawer, setShowDrawer] = useState(false)
 
-  const { isDrawerOpen, closeDrawer, setIsDrawerOpen, openDrawer } = useDrawer()
+  const { isDrawerOpen, setIsDrawerOpen, openDrawer, closeDrawer } = useDrawer()
 
   return (
     <main className="min-h-screen mb-5 text-white-light">
