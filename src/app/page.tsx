@@ -1,17 +1,30 @@
-import Head from 'next/head'
-import Image from 'next/image'
+'use client'
+import { useEffect, useRef, useState } from 'react'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { IoMdClose } from 'react-icons/io'
 
 import About from '@/components/About'
 import Header from '@/components/Header'
 import Welcome from '@/components/Welcome'
-import { maxWidthContent, responsivePadding } from '@/utils/constants'
 import Experience from '@/components/Experience'
 import Projects from '@/components/Projects'
+import { Button } from '@/components/Button'
+import { Drawer, useDrawer } from '@/components/Drawer'
 
 export default function Home() {
+  const [showDrawer, setShowDrawer] = useState(false)
+
+  const { isDrawerOpen, closeDrawer, setIsDrawerOpen, openDrawer } = useDrawer()
 
   return (
     <main className="min-h-screen mb-5 text-white-light">
+
+      <Drawer
+        isDrawerOpen={isDrawerOpen}
+        closeDrawer={closeDrawer}
+        setIsDrawerOpen={setIsDrawerOpen}
+
+      />
 
       <Header />
 
@@ -27,11 +40,9 @@ export default function Home() {
 
       <Projects />
 
-      <button
-        className='bg-green-water sticky rounded-full w-14 h-14 md:hidden float-right bottom-10 right-10'
-      >
-        Veol
-      </button>
+      <div className='md:hidden sticky bottom-8 right-8 z-30 float-right'>
+        <Button.Rounded size={30} icon={!isDrawerOpen ? GiHamburgerMenu : IoMdClose} onClick={() => setIsDrawerOpen(!isDrawerOpen)} />
+      </div>
 
     </main>
   )

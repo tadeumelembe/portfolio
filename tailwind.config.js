@@ -14,6 +14,7 @@ module.exports = {
       },
       colors:{
         'green-water':'#A0F2EA',
+        'blue-background':'rgb(12, 23, 38)',
         'white-light':'#F5FFFE'
       },
       maxWidth: {
