@@ -6,13 +6,13 @@ import { SocialIcon } from 'react-social-icons';
 import { maxWidthContent, userData } from "@/utils/constants";
 
 import { BsArrowRight } from 'react-icons/bs'
-import CustomButton from "./Button";
+import { Button } from "./Button";
 
 const tektur = localFont({ src: '../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
 
 export default function Welcome() {
     return (
-        <div id="home" className={`flex flex-col justify-center space-y-8 h-screen snap-y snap-center snap-mandatory snap-proximity`}>
+        <div id="home" className={`flex flex-col justify-center space-y-8 h-screen snap-y snap-center snap-proximity`}>
             <div id="home" className={`md:flex flex-row justify-between items-center`}>
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
@@ -24,7 +24,7 @@ export default function Welcome() {
                     className=" md:max-w-1/2"
                 >
 
-                    <h1 className={`text-5xl sm:text-6xl md:text-7xl  font-bold uppercase sm:text-left text-center text-gray-300 ${tektur.className}`}>
+                    <h1 className={`text-5xl sm:text-6xl md:text-7xl font-bold uppercase sm:text-left text-center text-gray-300 ${tektur.className}`}>
                         {`Hi, I'm`}
                         <br />
                         <span className="text-green-water">{userData.first_name + ' ' + userData.last_name}</span>
@@ -38,14 +38,8 @@ export default function Welcome() {
                     </p>
 
 
-                        <div className="mt-12">
-                    <CustomButton value="See more" icon={BsArrowRight} />
-                    </div>
-                    <div className="mt-10 ml-[-12px] hidden md:flex">
-                        <SocialIcon bgColor="#708DB600" fgColor="#708DB6" target="_blank" url="https://github.com/tadeumelembe" />
-                        <SocialIcon bgColor="#708DB600" fgColor="#708DB6" target="_blank" url="https://www.linkedin.com/in/tadeumelembe" />
-                        <SocialIcon bgColor="#708DB600" fgColor="#708DB6" target="_blank" url="https://www.instagram.com/code._daily/" />
-                        <SocialIcon bgColor="#708DB600" fgColor="#708DB6" target="_blank" url="https://www.twitter.com/tadeumelembe/" />
+                    <div className="mt-12 hidden md:inline-block">
+                        <Button.Secondary value="See more" icon={BsArrowRight} />
                     </div>
 
                 </motion.div>
