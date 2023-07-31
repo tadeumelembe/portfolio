@@ -14,8 +14,9 @@ export default function About() {
     return (
         <div id="about" className={`text-lg ${maxWidthContent}`}>
             <Title title="About me" />
+
             <div className="lg:flex flex-row justify-between gap-10 mt-4 items-start">
-                <div className="lg:w-1/2 md:pr-20">
+                <div className="lg:w-1/2 md:pr-15">
                     <p className="mt-10 font-semibold text-green-water">
                         {`<>`}
                         <br />
@@ -24,6 +25,7 @@ export default function About() {
                         {`</>`}
                     </p>
                 </div>
+
                 <div className="lg:w-1/2">
                     <p className="mt-10">
                         {`I'm`} a <span className="text-green-water">Full Stack engineer</span> with {yearsOfExperience} years of experience. I'm more focused on <span className="text-green-water">Mobile Development</span> using React Native, but always open to work in any stack.
@@ -34,6 +36,7 @@ export default function About() {
                     <p className="pt-4">
                         After finishing my education, I jumped into the world of Full-Stack Development in 2020, eager to turn my passion into a career.
                     </p>
+
                     <ul className="grid grid-cols-2 gap-4 mt-4">
                         {userData.skills.map(element => {
                             return (
@@ -44,8 +47,9 @@ export default function About() {
                             )
                         })}
                     </ul>
+
                     <p className="pt-4">
-                        Apart from this Skills, {`I'm`} always open to learn and explore new stuff, as technology continually evolves, pushing boundaries, and embracing innovation.
+                        Apart from these Skills, {`I'm`} always open to learn and explore new stuff, as technology continually evolves, pushing boundaries, and embracing innovation.
                     </p>
                 </div>
 

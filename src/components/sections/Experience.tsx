@@ -19,12 +19,12 @@ export default function Experience() {
             {userData.experiemce.map((element, index) => {
                 return (
                     <>
-                        <div key={index} className="sm:flex flex-row justify-between gap-5 mt-10 items-center">
+                        <div key={index} className="sm:flex flex-row justify-between gap-10 mt-10 items-center">
 
-                            <div className="md:flex flex-row gap-24 items-center justify-between">
-                                <div>
+                            <div className="sm:w-1/2 md:flex flex-row gap-5 items-center justify-start">
+                                <div className="w-full md:w-1/3">
                                     <p className="font-medium text-gray-400 mb-1">
-                                        {element.start_date + ' ' + element.end_date}
+                                        {element.start_date + ' - ' + element.end_date}
                                     </p>
                                     <h6 className="text-green-water font-semibold">{element.company}</h6>
                                 </div>
@@ -35,7 +35,7 @@ export default function Experience() {
 
                             <div className="sm:w-1/2">
                                 <p className="font-semibold text-gray-300 mt-10 sm:mt-0">
-                                    Lorem ipsum dolor sit amet consectetur. Euismod nunc neque metus diam id at. Hac turpis proin eget.
+                                   {element.job_descriotion}
                                 </p>
                             </div>
 
