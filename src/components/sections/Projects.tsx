@@ -1,10 +1,12 @@
 'use client'
-import { maxWidthContent, userData } from "@/utils/constants";
 import localFont from "next/font/local";
-import Title from "./TitleComponent";
-import BorderSeparetor from "./BorderSeparator";
+import { motion } from "framer-motion";
 
-const tektur = localFont({ src: '../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
+import { maxWidthContent, userData } from "@/utils/constants";
+import Title from "@/components/TitleComponent";
+import BorderSeparetor from "@/components/BorderSeparator";
+
+const tektur = localFont({ src: '../../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
 
 const currentYear = new Date().getFullYear()
 const yearsOfExperience = currentYear - 2021
@@ -29,7 +31,14 @@ export default function Projects() {
                     }
 
                     return (
-                        <div key={index} className={`${paddingSide} px-10 sm:px-0`}>
+                        <motion.div
+                            initial={{ y: 100, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                duration: 0.7,
+                                delay: 0.5
+                            }} key={index} className={`${paddingSide} px-10 sm:px-0`}>
                             <div key={index} className={`${reverseFlex} justify-between gap-10 mt-16 items-start`}>
 
                                 <div className="sm:w-1/2">
@@ -49,7 +58,7 @@ export default function Projects() {
                             {(index < userData.experiemce.length - 1) &&
                                 <BorderSeparetor />
                             }
-                        </div>
+                        </motion.div>
                     )
 
                 })}

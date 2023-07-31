@@ -1,10 +1,11 @@
 'use client'
-import { maxWidthContent, userData } from "@/utils/constants";
 import localFont from "next/font/local";
-import Title from "./TitleComponent";
-import BorderSeparetor from "./BorderSeparator";
 
-const tektur = localFont({ src: '../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
+import { maxWidthContent, userData } from "@/utils/constants";
+import Title from "@/components/TitleComponent";
+import BorderSeparetor from "@/components/BorderSeparator";
+
+const tektur = localFont({ src: '../../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
 
 const currentYear = new Date().getFullYear()
 const yearsOfExperience = currentYear - 2021

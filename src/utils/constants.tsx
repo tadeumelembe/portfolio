@@ -30,5 +30,13 @@ export const userData = {
             "name": "Reservajá",
             "description": ""
         }
+    ],
+    "skills":[
+        'Javascript',
+        'Typescript',
+        'React Native',
+        'Reactjs',
+        'Nodejs',
+        'Php/Laravel',
     ]
 }

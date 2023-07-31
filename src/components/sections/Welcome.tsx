@@ -3,12 +3,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import localFont from "next/font/local";
 import { SocialIcon } from 'react-social-icons';
-import { maxWidthContent, userData } from "@/utils/constants";
-
 import { BsArrowRight } from 'react-icons/bs'
-import { Button } from "./Button";
 
-const tektur = localFont({ src: '../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
+import { maxWidthContent, userData } from "@/utils/constants";
+import { Button } from "@/components/Button";
+
+const tektur = localFont({ src: '../../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
 
 export default function Welcome() {
     return (
