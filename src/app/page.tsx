@@ -10,6 +10,7 @@ import Experience from '@/components/sections/Experience'
 import Projects from '@/components/sections/Projects'
 import { Button } from '@/components/Button'
 import { Drawer, useDrawer } from '@/components/Drawer'
+import Footer from '@/components/sections/Footer'
 
 export default function Home() {
   const [showDrawer, setShowDrawer] = useState(false)
@@ -36,9 +37,10 @@ export default function Home() {
 
         <Experience />
 
-      </div>
 
-      <Projects />
+        <Projects />
+      <Footer />
+      </div>
 
       <div className='md:hidden sticky bottom-8 right-8 z-30 float-right'>
         <Button.Rounded size={30} icon={!isDrawerOpen ? GiHamburgerMenu : IoMdClose} onClick={() => setIsDrawerOpen(!isDrawerOpen)} />
