@@ -11,6 +11,7 @@ import Projects from '@/components/sections/Projects'
 import { Button } from '@/components/Button'
 import { Drawer, useDrawer } from '@/components/Drawer'
 import Footer from '@/components/sections/Footer'
+import ContactForm from '@/components/sections/ContactForm'
 
 export default function Home() {
   const [showDrawer, setShowDrawer] = useState(false)
@@ -39,6 +40,7 @@ export default function Home() {
 
 
         <Projects />
+        <ContactForm />
       <Footer />
       </div>
 

@@ -1,6 +1,7 @@
 'use client'
 import localFont from "next/font/local";
 import { FaCircleDot } from 'react-icons/fa6'
+import { motion } from "framer-motion";
 
 import Title from "@/components/TitleComponent";
 import { maxWidthContent, userData } from "@/utils/constants";
@@ -16,7 +17,14 @@ export default function About() {
             <Title title="About me" />
 
             <div className="lg:flex flex-row justify-between gap-10 mt-4 items-start">
-                <div className="lg:w-1/2 md:pr-15">
+                <motion.div
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        duration: 0.7,
+                        delay: 0.5
+                    }} className="lg:w-1/2 md:pr-15">
                     <p className="mt-10 font-semibold text-green-water">
                         {`<>`}
                         <br />
@@ -24,11 +32,18 @@ export default function About() {
                         <br />
                         {`</>`}
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="lg:w-1/2">
+                <motion.div
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        duration: 0.7,
+                        delay: 0.5
+                    }} className="lg:w-1/2">
                     <p className="mt-10">
-                        {`I'm`} a <span className="text-green-water">Full Stack engineer</span> with {yearsOfExperience} years of experience. I'm more focused on <span className="text-green-water">Mobile Development</span> using React Native, but always open to work in any stack.
+                        {`I'm`} a <span className="text-green-water">Full Stack engineer</span> with {yearsOfExperience} years of experience. {`I'm `}more focused on <span className="text-green-water">Mobile Development</span> using React Native, but always open to work in any stack.
                     </p>
                     <p className="pt-4">
                         My love for coding started during my school days, when I learnt about algorithms.
@@ -37,13 +52,20 @@ export default function About() {
                         After finishing my education, I jumped into the world of Full-Stack Development in 2020, eager to turn my passion into a career.
                     </p>
 
-                    <ul className="grid grid-cols-2 gap-4 mt-4">
-                        {userData.skills.map(element => {
+                    <ul className={`grid grid-cols-2 gap-4 mt-4 font-semibold pl-3 ${tektur.className}`}>
+                        {userData.skills.map((element, index) => {
                             return (
-                                <li className=" flex flex-row items-center gap-2">
-                                    <FaCircleDot size={10} color='#A0F2EA' />
+                                <motion.li
+                                    initial={{ y: 100, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{
+                                        ease:'easeOut',
+                                        duration: 0.7 + index*0.5,
+                                    }} key={index} className=" flex flex-row items-center gap-2">
+                                    <FaCircleDot size={10} color="#A0F2EA" />
                                     <p className="">{element}</p>
-                                </li>
+                                </motion.li>
                             )
                         })}
                     </ul>
@@ -51,7 +73,7 @@ export default function About() {
                     <p className="pt-4">
                         Apart from these Skills, {`I'm`} always open to learn and explore new stuff, as technology continually evolves, pushing boundaries, and embracing innovation.
                     </p>
-                </div>
+                </motion.div>
 
             </div>
         </div>

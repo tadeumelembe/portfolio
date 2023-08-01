@@ -10,15 +10,15 @@ export const userData = {
             "company": "Freelance",
             "position": "Mobile Developement",
             "start_date": "2022",
-            "end_date": "2022",
-            "job_descriotion": ""
+            "end_date": "Present",
+            "job_descriotion": "Developed many web and mobile apps"
         },
         {
             "company": "Paytech, SA",
             "position": "Full-Stack Web Developer",
             "start_date": "2020",
             "end_date": "2021",
-            "job_descriotion": ""
+            "job_descriotion": "Developed a user-friendly and feature-rich Sport Member Mobile app using React Native. I also Created an API for seamless app-server communication using PHP & Doctrine"
         }
     ],
     "projects": [
@@ -31,7 +31,7 @@ export const userData = {
             "description": ""
         }
     ],
-    "skills":[
+    "skills": [
         'Javascript',
         'Typescript',
         'React Native',
