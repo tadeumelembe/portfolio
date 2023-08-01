@@ -12,7 +12,7 @@ const yearsOfExperience = currentYear - 2021
 
 export default function Experience() {
     return (
-        <div id="experience" className={`${maxWidthContent}`}>
+        <div id="experience" className={`${maxWidthContent} space-y-8 flex flex-col justify-center px-10 md:px-20 [1330px]:px-0 max-w-[1366px] mx-auto`}>
 
             <Title title="Experience" />
 

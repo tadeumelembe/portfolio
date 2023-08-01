@@ -19,7 +19,7 @@ export default function Home() {
   const { isDrawerOpen, setIsDrawerOpen, openDrawer, closeDrawer } = useDrawer()
 
   return (
-    <main className="min-h-screen mb-5 text-white-light">
+    <main className="h-screen mb-5 text-white-light md:snap-y md:snap-mandatory overflow-y-scroll">
 
       <Drawer
         isDrawerOpen={isDrawerOpen}
@@ -30,19 +30,33 @@ export default function Home() {
 
       <Header />
 
-      <div className="px-10 md:px-20 [1330px]:px-0 max-w-[1366px] mx-auto">
 
+      <section id="home" className='snap-center'>
         <Welcome />
+      </section>
 
+      <section className='snap-center bg-blue-light-backgorund py-28'>
         <About />
+      </section>
+
+      <section className='snap-center py-28'>
 
         <Experience />
 
+      </section>
+
+      <section className='snap-center bg-blue-light-backgorund py-28'>
 
         <Projects />
+      </section>
+
+      <section id='contact' className='snap-center py-28'>
         <ContactForm />
-      <Footer />
-      </div>
+      </section>
+
+      <section className='snap-center py-8 bg-blue-light-backgorund'>
+        <Footer />
+      </section>
 
       <div className='md:hidden sticky bottom-8 right-8 z-30 float-right'>
         <Button.Rounded size={30} icon={!isDrawerOpen ? GiHamburgerMenu : IoMdClose} onClick={() => setIsDrawerOpen(!isDrawerOpen)} />

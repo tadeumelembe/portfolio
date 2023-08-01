@@ -4,8 +4,8 @@ import SocialIcons from '../SocialIcons'
 
 export default function Footer() {
     return (
-        <footer className="w-full md:flex flex-row justify-between items-center h-20 mt-20 mb-10">
-          
+        <footer className="w-full md:flex flex-row justify-between items-center px-10 md:px-20 [1330px]:px-0 max-w-[1366px] mx-auto">
+
             <div className='sm:flex flex-row items-center md:gap-10 font-semibold'>
                 <div className='flex flex-row items-center gap-2'>
                     <MdEmail size={20} color={'#708DB6'} />

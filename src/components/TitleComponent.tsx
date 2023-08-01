@@ -9,7 +9,7 @@ type TitleT = {
 }
 export default function Title(props: TitleT) {
     return (
-        <div className="sm:flex flex-row justify-between gap-10 mt-40 items-center">
+        <div className="sm:flex flex-row justify-between gap-10 items-center">
             <motion.div
                 initial={{ y: 100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}

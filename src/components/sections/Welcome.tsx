@@ -12,7 +12,7 @@ const tektur = localFont({ src: '../../../public/fonts/Tektur-VariableFont_wdth,
 
 export default function Welcome() {
     return (
-        <div id="home" className={`flex flex-col justify-center space-y-8 h-screen snap-y snap-center snap-proximity`}>
+        <div className={`flex flex-col justify-center space-y-8 h-screen px-10 md:px-20 [1330px]:px-0 max-w-[1366px] mx-auto`}>
             <div id="home" className={`md:flex flex-row justify-between items-center`}>
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
@@ -39,7 +39,9 @@ export default function Welcome() {
 
 
                     <div className="mt-12 hidden md:inline-block">
-                        <Button.Secondary value="See more" icon={BsArrowRight} />
+                        <Button.Secondary
+                            onClick={() => window.location.href = '#about'}
+                            value="See more" icon={BsArrowRight} />
                     </div>
                     <div className="mt-10 ml-[-12px] hidden md:flex">
                         <SocialIcons />

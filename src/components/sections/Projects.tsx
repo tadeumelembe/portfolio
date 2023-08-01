@@ -13,7 +13,7 @@ const yearsOfExperience = currentYear - 2021
 
 export default function Projects() {
     return (
-        <div id="projects" className="">
+        <div id="projects" className=" flex flex-col justify-center px-10 md:px-20 [1330px]:px-0 max-w-[1366px] mx-auto">
             <div className="">
                 <Title title="Projects" />
 
@@ -49,7 +49,7 @@ export default function Projects() {
                                 </div>
 
                                 <div className="sm:w-1/2 mt-8 sm:mt-0">
-                                    <div className=" border-2 border-fuchsia-300 w-full h-auto"></div>
+                                    <div className=" border-2 border-fuchsia-300 w-full h-72"></div>
                                 </div>
 
                             </div>

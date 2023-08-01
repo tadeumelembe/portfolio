@@ -40,7 +40,10 @@ export default function Header() {
                         <li className={`${navLinkHover}`}><a href="#experience">Experience</a></li>
                         <li className={`${navLinkHover}`}><a href="#projects">Projects</a></li>
                     </ul>
-                    <button className=" bg-green-water py-3 px-5 rounded text-black font-bold">{`Let's talk`}</button>
+                    <button 
+                            onClick={() => window.location.href = '#contact'}
+                    
+                    className=" bg-green-water py-3 px-5 rounded text-black font-bold">{`Let's talk`}</button>
 
                 </motion.nav>
             </div>

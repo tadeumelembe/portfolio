@@ -19,27 +19,35 @@ function Drawer(props: IDrawer) {
     const blurControls = useAnimationControls()
     const navControls = useAnimationControls()
 
+    function handleOpen(){
+        navControls.start({
+            x: 0,
+            transition: { duration: 0.5, ease: 'easeOut' },
+        })
+        blurControls.start({
+            opacity: 1,
+            transition: { duration: 0.8, ease: 'easeOut' },
+        })
+    }
+
+    function handleClose(){
+        navControls.start({
+            x: '100%',
+            transition: { duration: 0.5, ease: 'easeIn' },
+
+        })
+        blurControls.start({
+            opacity: 0,
+            transition: { duration: 0.2, ease: 'easeIn' },
+        })
+    }
+
 
     useEffect(() => {
         if (isDrawerOpen) {
-            navControls.start({
-                x: 0,
-                transition: { duration: 0.5, ease: 'easeOut' },
-            })
-            blurControls.start({
-                opacity: 1,
-                transition: { duration: 0.8, ease: 'easeOut' },
-            })
+          handleOpen()
         } else {
-            navControls.start({
-                x: '100%',
-                transition: { duration: 0.5, ease: 'easeIn' },
-
-            })
-            blurControls.start({
-                opacity: 0,
-                transition: { duration: 0.2, ease: 'easeIn' },
-            })
+       handleClose()
         }
     }, [isDrawerOpen])
 
@@ -88,9 +96,6 @@ function useDrawer() {
         document.getElementById('drawer-nav')?.classList.add("sm:hidden");
         document.getElementById('drawer-nav')?.classList.add("flex");
         document.getElementById('drawer-nav')?.classList.add("flex-row");
-
-
-        console.log('kkkkk')
     }
 
     function closeDrawer() {

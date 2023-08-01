@@ -20,7 +20,8 @@ export default function ContactForm() {
 
 
     return (
-        <div className="h-screen flex flex-col w-full items-center justify-center">
+        <div className="flex flex-col w-full items-center justify-center px-10 md:px-20 [1330px]:px-0 max-w-[1366px] mx-auto">
+
             <h3 className={`font-semibold text-3xl ${tektur.className}`}>Send me a message!</h3>
             <p className=" text-gray-400 text-lg mt-4">Lorem ipsum dolor sit amet consectetu. Commodo ornare commodo pllentes in</p>
 
@@ -46,7 +47,7 @@ export default function ContactForm() {
                 <div className="inputContainer">
                     <label className="labelInput" htmlFor="">Your message</label>
 
-                    <textarea className="contactInput" {...register('message')} placeholder="I'd like to talk about . . ." name="" id="" cols="30" rows="1"></textarea>
+                    <textarea className="contactInput" {...register('message')} placeholder="I'd like to talk about . . ." name="" id="" cols={30} rows={1}></textarea>
                 </div>
 
                 <Button.Secondary

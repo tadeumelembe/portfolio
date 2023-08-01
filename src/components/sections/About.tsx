@@ -13,7 +13,7 @@ const yearsOfExperience = currentYear - 2021
 
 export default function About() {
     return (
-        <div id="about" className={`text-lg ${maxWidthContent}`}>
+        <div id="about" className={`text-lg flex flex-col justify-evenly px-10 md:px-20 [1330px]:px-0 max-w-[1366px] mx-auto `}>
             <Title title="About me" />
 
             <div className="lg:flex flex-row justify-between gap-10 mt-4 items-start">

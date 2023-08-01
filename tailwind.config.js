@@ -15,10 +15,14 @@ module.exports = {
       colors:{
         'green-water':'#A0F2EA',
         'blue-background':'rgb(12, 23, 38)',
+        'blue-light-backgorund':'#132338',
         'white-light':'#F5FFFE'
       },
       maxWidth: {
         '1/2': '50%',
+      },
+      divideWidth:{
+        '1xl':'1330px'
       }
     },
   },
