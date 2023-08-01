@@ -13,8 +13,8 @@ const yearsOfExperience = currentYear - 2021
 
 export default function Projects() {
     return (
-        <div id="projects" className="max-w-[1366px] mx-auto">
-            <div className="px-10 md:px-20">
+        <div id="projects" className="">
+            <div className="">
                 <Title title="Projects" />
 
             </div>
@@ -22,10 +22,8 @@ export default function Projects() {
             <div className="mt-20">
 
                 {userData.projects.map((element, index) => {
-                    let paddingSide = 'sm:pl-10 md:pl-20 lg:pr-20'
                     let reverseFlex = 'sm:flex flex-row'
                     if (index % 2 !== 0) {
-                        paddingSide = 'pr-10 md:pr-20 lg:pl-20'
                         reverseFlex = 'sm:flex flex-row-reverse'
 
                     }
@@ -38,7 +36,7 @@ export default function Projects() {
                             transition={{
                                 duration: 0.7,
                                 delay: 0.5
-                            }} key={index} className={`${paddingSide} px-10 sm:px-0`}>
+                            }} key={index} className={``}>
                             <div key={index} className={`${reverseFlex} justify-between gap-10 mt-16 items-start`}>
 
                                 <div className="sm:w-1/2">

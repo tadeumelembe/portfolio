@@ -2,11 +2,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import localFont from "next/font/local";
-import { SocialIcon } from 'react-social-icons';
 import { BsArrowRight } from 'react-icons/bs'
 
-import { maxWidthContent, userData } from "@/utils/constants";
+import { userData } from "@/utils/constants";
 import { Button } from "@/components/Button";
+import SocialIcons from "../SocialIcons";
 
 const tektur = localFont({ src: '../../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
 
@@ -40,6 +40,9 @@ export default function Welcome() {
 
                     <div className="mt-12 hidden md:inline-block">
                         <Button.Secondary value="See more" icon={BsArrowRight} />
+                    </div>
+                    <div className="mt-10 ml-[-12px] hidden md:flex">
+                        <SocialIcons />
                     </div>
 
                 </motion.div>
