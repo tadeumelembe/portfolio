@@ -19,7 +19,7 @@ export default function Home() {
   const { isDrawerOpen, setIsDrawerOpen, openDrawer, closeDrawer } = useDrawer()
 
   return (
-    <main className="h-screen mb-5 text-white-light md:snap-y md:snap-mandatory overflow-y-scroll">
+    <main className="h-screen mb-5 text-white-light md:snap-y md:snap-mandatory md:overflow-y-scroll">
 
       <Drawer
         isDrawerOpen={isDrawerOpen}
