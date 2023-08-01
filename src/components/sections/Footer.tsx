@@ -5,6 +5,7 @@ import SocialIcons from '../SocialIcons'
 export default function Footer() {
     return (
         <footer className="w-full md:flex flex-row justify-between items-center h-20 mt-20 mb-10">
+          
             <div className='sm:flex flex-row items-center md:gap-10 font-semibold'>
                 <div className='flex flex-row items-center gap-2'>
                     <MdEmail size={20} color={'#708DB6'} />
@@ -15,6 +16,7 @@ export default function Footer() {
                     <h6 className=''>+258 820 896 638</h6>
                 </div>
             </div>
+
             <div className="mt-5 md:mt-0 ml-[-12px] flex">
                 <SocialIcons />
             </div>

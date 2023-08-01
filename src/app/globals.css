@@ -24,3 +24,20 @@ body {
 header {
   background: linear-gradient(0.25turn, rgba(37, 62, 95, 0.37), rgba(27, 54, 91, 0.17));
 }
+
+@layer components {
+  .contactInput {
+    @apply outline-none bg-transparent border-b-2 border-gray-500 px-1 py-3
+  }
+
+  .labelInput {
+    @apply text-gray-300 font-medium text-sm
+  }
+
+  .inputContainer {
+    @apply flex flex-col
+  }
+  .inputContainerFirstRow {
+    @apply w-full md:w-1/2
+  }
+}
