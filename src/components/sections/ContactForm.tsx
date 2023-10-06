@@ -6,7 +6,7 @@ import { Button } from "../Button";
 
 const tektur = localFont({ src: '../../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
 
-type Inputs = {
+export type Inputs = {
     name: string,
     email: string,
     message: string,
@@ -14,7 +14,7 @@ type Inputs = {
 
 export default function ContactForm() {
     const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = data => {
+    const onSubmitContactForm: SubmitHandler<Inputs> = data => {
         console.log(data)
     }
 
@@ -23,9 +23,9 @@ export default function ContactForm() {
         <div className="flex flex-col w-full items-center justify-center px-10 md:px-20 [1330px]:px-0 max-w-[1366px] mx-auto">
 
             <h3 className={`font-semibold text-3xl ${tektur.className}`}>Send me a message!</h3>
-            <p className=" text-gray-400 text-lg mt-4">Lorem ipsum dolor sit amet consectetu. Commodo ornare commodo pllentes in</p>
+            <p className=" text-gray-400 text-lg mt-4">Feel free to give me a touch, I'm here for you.</p>
 
-            <form className="flex flex-col gap-10 mt-14 w-full mx-auto" onSubmit={handleSubmit(onSubmit)}>
+            <form className="flex flex-col gap-10 mt-14 w-full mx-auto" onSubmit={handleSubmit(onSubmitContactForm)}>
                 <div className="flex flex-col md:flex-row gap-10">
                     <div className="inputContainer inputContainerFirstRow">
                         <label className="labelInput" htmlFor="">Your name</label>
@@ -55,7 +55,6 @@ export default function ContactForm() {
                     type={'submit'}
                     className="w-auto mx-auto"
                     icon={BsFillSendFill}
-                    onClick={() => handleSubmit(onSubmit)}
                 />
             </form>
 

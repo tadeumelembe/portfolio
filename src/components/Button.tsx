@@ -5,7 +5,7 @@ import React, { ButtonHTMLAttributes, ElementType } from "react";
 type ButtonT = ButtonHTMLAttributes<HTMLButtonElement> & {
     value?: string;
     icon?: ElementType;
-    onClick: () => void,
+    onClick?: () => void,
 }
 function Secondary(props: ButtonT) {
 
