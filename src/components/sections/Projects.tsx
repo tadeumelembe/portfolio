@@ -42,7 +42,7 @@ export default function Projects() {
                                 <div className="sm:w-1/2">
                                     <h6 className="font-semibold text-xl">{element.name}</h6>
                                     <p className="font-semibold text-gray-300 mt-5">
-                                        Lorem ipsum dolor sit amet consectetur. Euismod nunc neque metus diam id at. Hac turpis proin eget.
+                                        {element.description}
                                     </p>
                                     <button className=" bg-transparent py-3 px-5 mt-5 rounded text-green-water border-2 border-green-water font-bold">{`View project`}</button>
 
