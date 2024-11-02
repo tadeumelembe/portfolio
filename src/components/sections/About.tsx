@@ -62,7 +62,7 @@ export default function About() {
                                     transition={{
                                         ease:'easeOut',
                                         duration: 0.7 + index*0.5,
-                                    }} key={index} className=" flex flex-row items-center gap-2">
+                                    }} key={`skills-item-${index}`} className=" flex flex-row items-center gap-2">
                                     <FaCircleDot size={10} color="#A0F2EA" />
                                     <p className="">{element}</p>
                                 </motion.li>

@@ -18,8 +18,8 @@ export default function Experience() {
 
             {userData.experiemce.map((element, index) => {
                 return (
-                    <>
-                        <div key={index} className="sm:flex flex-row justify-between gap-10 mt-10 items-center">
+                    <div key={`experience-item-${index}`}>
+                        <div className="sm:flex flex-row justify-between gap-10 mt-10 items-center">
 
                             <div className="sm:w-1/2 md:flex flex-row gap-5 items-center justify-start">
                                 <div className="w-full md:w-1/3">
@@ -43,7 +43,7 @@ export default function Experience() {
                         {(index < userData.experiemce.length - 1) &&
                             <BorderSeparetor />
                         }
-                    </>
+                    </div>
                 )
 
             })}

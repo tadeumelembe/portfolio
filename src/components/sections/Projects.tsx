@@ -25,7 +25,6 @@ export default function Projects() {
                     let reverseFlex = 'sm:flex flex-row'
                     if (index % 2 !== 0) {
                         reverseFlex = 'sm:flex flex-row-reverse'
-
                     }
 
                     return (
@@ -36,8 +35,8 @@ export default function Projects() {
                             transition={{
                                 duration: 0.7,
                                 delay: 0.5
-                            }} key={index} className={``}>
-                            <div key={index} className={`${reverseFlex} justify-between gap-10 mt-16 items-start`}>
+                            }} key={`project-item-${index}`} className={``}>
+                            <div className={`${reverseFlex} justify-between gap-10 mt-16 items-start`}>
 
                                 <div className="sm:w-1/2">
                                     <h6 className="font-semibold text-xl">{element.name}</h6>
