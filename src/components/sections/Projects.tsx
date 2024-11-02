@@ -65,8 +65,8 @@ export default function Projects() {
                   </p>
 
                   <div className="flex flex-row gap-5 my-6">
-                    {element.tools.map((el) => (
-                      <div className=" bg-slate-500 px-3 py-2 rounded-full">
+                    {element.tools.map((el,index) => (
+                      <div key={`skills-itemm-${index}`} className=" bg-slate-500 px-3 py-2 rounded-full">
                         <p className=" text-xs">{el}</p>
                       </div>
                     ))}
@@ -80,12 +80,14 @@ export default function Projects() {
 
                 <div className="hidden md:flex sm:w-1/2 mt-8 sm:mt-0">
                   <div className=" border-0 border-fuchsia-300 w-full h-72">
+                    <a href={element.link} target="_blank">
                     <Image
                       src={element.image}
                       alt="Haras-Pro banner"
                       width={1000}
                       height={500}
                     />
+                    </a>
                   </div>
                 </div>
               </div>
