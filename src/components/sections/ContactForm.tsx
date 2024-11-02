@@ -23,7 +23,7 @@ export default function ContactForm() {
         <div className="flex flex-col w-full items-center justify-center px-10 md:px-20 [1330px]:px-0 max-w-[1366px] mx-auto">
 
             <h3 className={`font-semibold text-3xl ${tektur.className}`}>Send me a message!</h3>
-            <p className=" text-gray-400 text-lg mt-4">Feel free to give me a touch, I'm here for you.</p>
+            <p className=" text-gray-400 text-lg mt-4">{`Feel free to give me a touch, I'm here for you.`}</p>
 
             <form className="flex flex-col gap-10 mt-14 w-full mx-auto" onSubmit={handleSubmit(onSubmitContactForm)}>
                 <div className="flex flex-col md:flex-row gap-10">

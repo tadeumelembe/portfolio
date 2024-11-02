@@ -39,16 +39,19 @@ export const userData = {
     "projects": [
         {
             "name": "Haras Pro",
-            "description": "Managing a stud farm has never been easier. With HarasPro, you can monitor all aspects of your horses' health and well-being, from controlling vaccines and veterinary treatments to monitoring reproduction. Furthermore, the app allows you to manage your payments and invoices, ensuring efficient administration efficient financial management of your stud farm. Ideal for stud owners, veterinarians and horse enthusiasts, our app offers a complete and intuitive platform so you can make informed decisions and ensure the best care for your Horses, wherever you are."
+            "image":"/work/haras-pro.png",
+            "link":"https://apps.apple.com/us/app/haras-perigrina/id6670188058",
+            "tools":['React Native','TypeScript','Expo'],
+            "description": "Managing a stud farm has never been easier. With HarasPro, you can monitor all aspects of your horses, health and well-being, from controlling vaccines and veterinary treatments to monitoring reproduction. Furthermore, the app allows you to manage your payments and invoices, ensuring efficient administration efficient financial management of your stud farm. "
         },
-        {
-            "name": "Recipe-Reels",
-            "description": "The Recipe App is an open-source project that aims to provide users with a platform to share, discover, and explore a wide variety of recipes. Whether you're an aspiring chef, a home cook, or simply someone who enjoys trying out new dishes, this app is designed to enhance your culinary experience."
-        },
-        {
-            "name": "Reservajá",
-            "description": ""
-        }
+        // {
+        //     "name": "Recipe-Reels",
+        //     "description": "The Recipe App is an open-source project that aims to provide users with a platform to share, discover, and explore a wide variety of recipes. Whether you're an aspiring chef, a home cook, or simply someone who enjoys trying out new dishes, this app is designed to enhance your culinary experience."
+        // },
+        // {
+        //     "name": "Reservajá",
+        //     "description": ""
+        // }
     ],
     "skills": [
         'Javascript',
