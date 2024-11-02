@@ -50,11 +50,11 @@ export default function Home() {
         <Projects />
       </section>
 
-      <section id='contact' className='snap-center py-28'>
+      <section id='contact' className='snap-center py-28 hidden'>
         <ContactForm />
       </section>
 
-      <section className='snap-center py-8 bg-blue-light-backgorund'>
+      <section className='snap-center py-8 '>
         <Footer />
       </section>
 
