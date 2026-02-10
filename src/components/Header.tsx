@@ -3,8 +3,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { responsivePadding } from "@/utils/constants";
 import localFont from "next/font/local";
-import { SocialIcon } from "react-social-icons";
-
 const tektur = localFont({ src: '../../public/fonts/Tektur-VariableFont_wdth,wght.ttf' })
 
 const navLinkHover = 'hover:text-green-water'
