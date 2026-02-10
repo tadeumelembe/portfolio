@@ -38,20 +38,26 @@ export const userData = {
     ],
     "projects": [
         {
+            "name": "StartBrusa",
+            "image":"/work/startbrusa.png",
+            "link":"https://apps.apple.com/us/app/startbrusa/id6754345738?l=pt-BR",
+            "tools":['React Native','TypeScript','Expo', 'IOS', 'Android'],
+            "description": "Discover tourist attractions, festivals and the best Brazilian food. Find jobs, housing, products and services quickly and in your language. Access news in Portuguese, promote your business, make connections and join the largest Brazilian community in the United States."
+        },
+        {
             "name": "Haras Pro",
             "image":"/work/haras-pro.png",
             "link":"https://apps.apple.com/us/app/haras-perigrina/id6670188058",
-            "tools":['React Native','TypeScript','Expo'],
+            "tools":['React Native','TypeScript','Expo', 'IOS', 'Android'],
             "description": "Managing a stud farm has never been easier. With HarasPro, you can monitor all aspects of your horses, health and well-being, from controlling vaccines and veterinary treatments to monitoring reproduction. Furthermore, the app allows you to manage your payments and invoices, ensuring efficient administration efficient financial management of your stud farm. "
         },
-        // {
-        //     "name": "Recipe-Reels",
-        //     "description": "The Recipe App is an open-source project that aims to provide users with a platform to share, discover, and explore a wide variety of recipes. Whether you're an aspiring chef, a home cook, or simply someone who enjoys trying out new dishes, this app is designed to enhance your culinary experience."
-        // },
-        // {
-        //     "name": "Reservajá",
-        //     "description": ""
-        // }
+        {
+            "name": "Mozambique Business Link",
+            "image":"/work/business-link.png",
+            "link":"https://businesslink.co.mz/",
+            "tools":['Wordpress','Elementor','PHP'],
+            "description": "In Mozambique Business Link website, you can read about the latest economic news and events in Mozambique."
+        }
     ],
     "skills": [
         'Javascript',
