@@ -54,7 +54,7 @@ export const userData = {
         {
             "name": "Mozambique Business Link",
             "image":"/work/business-link.png",
-            "link":"https://businesslink.co.mz/",
+            "link":"https://mozambiquebusinesslink.com/",
             "tools":['Wordpress','Elementor','PHP'],
             "description": "In Mozambique Business Link website, you can read about the latest economic news and events in Mozambique."
         }
