@@ -41,15 +41,15 @@ export const userData = {
             "name": "StartBrusa",
             "image":"/work/startbrusa.png",
             "link":"https://apps.apple.com/us/app/startbrusa/id6754345738?l=pt-BR",
-            "tools":['React Native','TypeScript','Expo', 'IOS', 'Android'],
-            "description": "Discover tourist attractions, festivals and the best Brazilian food. Find jobs, housing, products and services quickly and in your language. Access news in Portuguese, promote your business, make connections and join the largest Brazilian community in the United States."
+            "tools":['React Native','TypeScript','Expo', 'IOS', 'Android', 'Supabase', 'Google Auth'],
+            "description": "Built with React Native + Expo + Supabase. Implemented subscription-based content, in-app purchases (RevenueCat), Stripe integration, Google Auth, Apple Sign-In, and location-based features"
         },
         {
             "name": "Haras Pro",
             "image":"/work/haras-pro.png",
             "link":"https://apps.apple.com/us/app/haras-perigrina/id6670188058",
-            "tools":['React Native','TypeScript','Expo', 'IOS', 'Android'],
-            "description": "Managing a stud farm has never been easier. With HarasPro, you can monitor all aspects of your horses, health and well-being, from controlling vaccines and veterinary treatments to monitoring reproduction. Furthermore, the app allows you to manage your payments and invoices, ensuring efficient administration efficient financial management of your stud farm. "
+            "tools":['React Native','TypeScript','Expo', 'IOS', 'Android', 'Figma', 'Azure'],
+            "description": "Developed pixel-perfect UI from Figma prototypes. Implemented CI/CD pipelines using Azure."
         },
         {
             "name": "Mozambique Business Link",
