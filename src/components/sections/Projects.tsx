@@ -64,7 +64,7 @@ export default function Projects() {
                     {element.description}
                   </p>
 
-                  <div className="flex flex-row gap-5 my-6">
+                  <div className="flex flex-row flex-wrap gap-5 my-6">
                     {element.tools.map((el, index) => (
                       <div key={`skills-itemm-${index}`} className=" bg-slate-500 px-3 py-2 rounded-full">
                         <p className=" text-xs">{el}</p>
