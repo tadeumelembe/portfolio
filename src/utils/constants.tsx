@@ -52,6 +52,13 @@ export const userData = {
             "description": "Developed pixel-perfect UI from Figma prototypes. Implemented CI/CD pipelines using Azure."
         },
         {
+            "name": "Help Car",
+            "image":"/work/helpcar.jpg",
+            "link":"https://www.helpcar.me/",
+            "tools":['React Native','TypeScript','Expo','NodeJS','Express','MongoDB', 'IOS', 'Android', 'Figma', 'Azure'],
+            "description": "Developed pixel-perfect UI from Figma prototypes. Worked on both front and backend of the app. Implemented Stripe Payments, Stripe Split Payments, Google Maps, Google Auth, Apple Sign-In, and location-based features"
+        },
+        {
             "name": "Mozambique Business Link",
             "image":"/work/business-link.png",
             "link":"https://mozambiquebusinesslink.com/",
