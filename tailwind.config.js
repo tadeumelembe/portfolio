@@ -1,29 +1,27 @@
 /** @type {import('tailwindcss').Config} */
+const token = (name) => `rgb(var(--${name}) / <alpha-value>)`
+
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        bg: token('bg'),
+        surface: token('surface'),
+        ink: token('ink'),
+        muted: token('muted'),
+        line: token('line'),
+        accent: token('accent'),
+        'on-accent': token('on-accent'),
+        chip: token('chip'),
       },
-      colors:{
-        'green-water':'#A0F2EA',
-        'blue-background':'rgb(12, 23, 38)',
-        'blue-light-backgorund':'#132338',
-        'white-light':'#F5FFFE'
+      fontFamily: {
+        sans: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', 'var(--font-body)', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
-        '1/2': '50%',
+        page: '72rem',
       },
-      divideWidth:{
-        '1xl':'1330px'
-      }
     },
   },
   plugins: [],
