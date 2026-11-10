@@ -120,8 +120,8 @@ export const userData = {
                 'CI/CD pipelines with Azure',
             ],
             tools: ['React Native', 'TypeScript', 'Expo', 'Figma', 'Azure'],
-            link: 'https://apps.apple.com/us/app/haras-perigrina/id6670188058',
-            linkLabel: 'View on the App Store',
+            link: 'https://play.google.com/store/apps/details?id=com.haraspro.mvperegrina&hl=pt',
+            linkLabel: 'View on Google Play',
         },
         {
             name: 'Help Car',
