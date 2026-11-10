@@ -75,7 +75,8 @@ export const userData = {
     projects: [
         {
             name: 'Go Girls MOVE',
-            // TODO(content): add a cover image (e.g. /work/go-girls.png, ~1200×600) and its imageAlt.
+            image: '/work/go-girls.jpg',
+            imageAlt: 'Go Girls MOVE app screens: welcome, home with daily distance, Circle the world progress and logging a walk',
             platform: 'iOS app',
             summary: 'Fitness-tracking app for Go Girls MOVE, a global movement challenge raising funds for the Go Girls Foundation, which supports women at risk.',
             // Features as listed on the App Store.
