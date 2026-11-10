@@ -1,102 +1,84 @@
-"use client";
-import localFont from "next/font/local";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from 'next/image'
 
-import { maxWidthContent, userData } from "@/utils/constants";
-import Title from "@/components/TitleComponent";
-import BorderSeparetor from "@/components/BorderSeparator";
-
-const tektur = localFont({
-  src: "../../../public/fonts/Tektur-VariableFont_wdth,wght.ttf",
-});
-
-const currentYear = new Date().getFullYear();
-const yearsOfExperience = currentYear - 2021;
+import Container from '@/components/Container'
+import SectionHeading from '@/components/SectionHeading'
+import { ArrowUpRight } from '@/components/Icons'
+import { Project, userData } from '@/utils/constants'
 
 export default function Projects() {
   return (
-    <div
-      id="projects"
-      className=" flex flex-col justify-center px-10 md:px-20 [1330px]:px-0 max-w-[1366px] mx-auto"
-    >
-      <div className="">
-        <Title title="Work" />
+    <section id="work" aria-labelledby="work-title" className="py-16 sm:py-24">
+      <Container>
+        <SectionHeading id="work-title" title="Selected work" intro="Apps and websites I've built, from first screen to store release." />
+
+        <ul className="grid gap-6 md:grid-cols-2 lg:gap-8">
+          {userData.projects.map((project, index) => (
+            <li key={project.name} className="flex">
+              <ProjectCard project={project} priority={index === 0} />
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </section>
+  )
+}
+
+function ProjectCard({ project, priority }: { project: Project; priority: boolean }) {
+  return (
+    <article className="group relative flex w-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-colors hover:border-muted [&:has(a:focus-visible)]:ring-2 [&:has(a:focus-visible)]:ring-accent [&:has(a:focus-visible)]:ring-offset-2 [&:has(a:focus-visible)]:ring-offset-bg">
+      <div className="relative aspect-video overflow-hidden border-b border-line bg-chip sm:aspect-[2/1]">
+        <Image
+          src={project.image}
+          alt={project.imageAlt}
+          fill
+          sizes="(min-width: 1152px) 552px, (min-width: 768px) 50vw, 100vw"
+          priority={priority}
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+        />
       </div>
 
-      <div className="mt-20">
-        {userData.projects.map((element, index) => {
-          let reverseFlex = "sm:flex flex-row";
-          if (index % 2 !== 0) {
-            reverseFlex = "sm:flex flex-row-reverse";
-          }
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <p className="text-sm font-medium text-muted">{project.platform}</p>
+        <h3 className="mt-1.5 font-display text-2xl font-bold tracking-tight">
+          {/* Stretched link: the whole card is clickable, but it's a single link for screen readers. */}
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="after:absolute after:inset-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+          >
+            {project.name}
+            <span className="sr-only"> — {project.linkLabel} (opens in a new tab)</span>
+          </a>
+        </h3>
 
-          return (
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.7,
-                delay: 0.5,
-              }}
-              key={`project-item-${index}`}
-              className={``}
-            >
-              <div
-                className={`${reverseFlex} justify-between gap-10 mt-16 items-start`}
-              >
-                <div className="md:w-1/2">
-                  <h6 className="font-semibold text-xl">{element.name}</h6>
+        {project.summary && <p className="mt-2 text-muted">{project.summary}</p>}
 
-                  <div className="flex md:hidden sm:w-1/2 sm:mt-0 mb-4">
-                    <div className=" border-0 border-fuchsia-300 w-full h-auto">
-                      <Image
-                        src={element.image}
-                        alt="Haras-Pro banner"
-                        width={1000}
-                        height={500}
-                      />
-                    </div>
-                  </div>
+        {project.highlights.length > 0 && (
+          <ul className="mt-4 space-y-2 text-[0.95rem]">
+            {project.highlights.map((item) => (
+              <li key={item} className="flex gap-3">
+                <span className="mt-[0.6em] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        )}
 
-                  <p className="font-semibold text-gray-300 md:mt-5">
-                    {element.description}
-                  </p>
-
-                  <div className="flex flex-row flex-wrap gap-5 my-6">
-                    {element.tools.map((el, index) => (
-                      <div key={`skills-itemm-${index}`} className=" bg-slate-500 px-3 py-2 rounded-full">
-                        <p className=" text-xs">{el}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  <button
-                    onClick={() => window.open(element.link, "_blank")}
-                    className=" bg-transparent py-3 px-5 rounded text-green-water border-2 border-green-water font-bold"
-                  >{`Learn more`}</button>
-                </div>
-
-                <div className="hidden md:flex sm:w-1/2 mt-8 sm:mt-0">
-                  <div className=" border-0 border-fuchsia-300 w-full h-72">
-                    <a href={element.link} target="_blank">
-                      <Image
-                        className="w-full h-full object-cover"
-                        src={element.image}
-                        alt="Haras-Pro banner"
-                        width={1000}
-                        height={500}
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {index < userData.experiemce.length - 1 && <BorderSeparetor />}
-            </motion.div>
-          );
-        })}
+        <div className="mt-5 flex flex-1 flex-col justify-end gap-5">
+          <ul className="flex flex-wrap gap-2" aria-label="Built with">
+            {project.tools.map((tool) => (
+              <li key={tool} className="rounded-full bg-chip px-3 py-1 text-xs font-medium">
+                {tool}
+              </li>
+            ))}
+          </ul>
+          <span aria-hidden="true" className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+            {project.linkLabel}
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </span>
+        </div>
       </div>
-    </div>
-  );
+    </article>
+  )
 }
