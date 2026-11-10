@@ -2,8 +2,9 @@ export const SITE_URL = 'https://tadeu.netlify.app'
 
 export type Project = {
     name: string
-    image: string
-    imageAlt: string
+    // Optional: cards without an image get a simple typographic cover.
+    image?: string
+    imageAlt?: string
     platform: string
     // TODO(content): one-sentence summary of what the product is / who it is for.
     // Left empty where we don't have it yet — the card simply hides the line.
@@ -12,6 +13,7 @@ export type Project = {
     tools: string[]
     link: string
     linkLabel: string
+    secondaryLink?: { href: string; label: string }
 }
 
 export const userData = {
@@ -116,16 +118,24 @@ export const userData = {
             linkLabel: 'Visit helpcar.me',
         },
         {
-            name: 'Mozambique Business Link',
-            image: '/work/business-link.png',
-            imageAlt: 'Mozambique Business Link homepage hero over a container port at sunset',
-            platform: 'Website',
-            summary: 'A website for the latest economic news and events in Mozambique.',
-            // TODO(content): what you did on this project (design, build, content setup…).
-            highlights: [],
-            tools: ['WordPress', 'Elementor', 'PHP'],
-            link: 'https://mozambiquebusinesslink.com/',
-            linkLabel: 'Visit the website',
+            name: 'Go Girls MOVE',
+            // TODO(content): add a cover image (e.g. /work/go-girls.png, ~1200×600) and its imageAlt.
+            platform: 'iOS app',
+            summary: 'Fitness-tracking app for Go Girls MOVE, a global movement challenge raising funds for the Go Girls Foundation, which supports women at risk.',
+            // Features as listed on the App Store.
+            // TODO(content): confirm these are what you built, and add anything else you did (backend, web, etc.).
+            highlights: [
+                'Personal distance goals with progress tracking',
+                'Join a team, workplace or store with a six-digit code',
+                'Team leaderboard throughout the month',
+                'Shareable challenge pages',
+                'In-app donations to the Go Girls Foundation',
+            ],
+            // TODO(content): tech stack used.
+            tools: [],
+            link: 'https://apps.apple.com/us/app/go-girls/id6810083153',
+            linkLabel: 'View on the App Store',
+            secondaryLink: { href: 'https://www.gogirlsmove.org.au/', label: 'gogirlsmove.org.au' },
         },
     ] as Project[],
 
