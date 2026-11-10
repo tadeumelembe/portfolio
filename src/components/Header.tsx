@@ -1,5 +1,6 @@
 import { fullName, mailto } from '@/utils/constants'
 import Container from './Container'
+import ThemeToggle from './ThemeToggle'
 
 const links = [
   { href: '#work', label: 'Work' },
@@ -10,11 +11,11 @@ const links = [
 export default function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-bg/90 backdrop-blur">
-      <Container className="flex h-16 items-center justify-between gap-3">
-        <a href="#main" className="font-display text-lg font-bold tracking-tight">
+      <Container className="flex h-16 items-center justify-between gap-2">
+        <a href="#main" className="whitespace-nowrap font-display text-base font-bold tracking-tight sm:text-lg">
           {fullName}
         </a>
-        <nav aria-label="Main" className="flex items-center gap-1 sm:gap-2">
+        <nav aria-label="Main" className="flex items-center sm:gap-2">
           <ul className="hidden items-center sm:flex">
             {links.map((link) => (
               <li key={link.href}>
@@ -24,7 +25,8 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <a href={mailto} className="btn-primary min-h-10 px-4">
+          <ThemeToggle />
+          <a href={mailto} className="btn-primary min-h-10 px-3.5 sm:px-4">
             Email me
           </a>
         </nav>

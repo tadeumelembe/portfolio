@@ -46,6 +46,9 @@ export const viewport: Viewport = {
   ],
 }
 
+// Applies a saved light/dark choice before first paint so there's no flash of the wrong theme.
+const themeScript = `try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}`
+
 const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -58,7 +61,11 @@ const personJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    // suppressHydrationWarning: the inline script below may set data-theme before React hydrates.
+    <html lang="en" className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="font-sans">
         <a
           href="#main"
