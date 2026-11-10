@@ -71,7 +71,28 @@ export const userData = {
         },
     ],
 
+    // Newest first.
     projects: [
+        {
+            name: 'Go Girls MOVE',
+            // TODO(content): add a cover image (e.g. /work/go-girls.png, ~1200×600) and its imageAlt.
+            platform: 'iOS app',
+            summary: 'Fitness-tracking app for Go Girls MOVE, a global movement challenge raising funds for the Go Girls Foundation, which supports women at risk.',
+            // Features as listed on the App Store.
+            // TODO(content): confirm these are what you built, and add anything else you did (backend, web, etc.).
+            highlights: [
+                'Personal distance goals with progress tracking',
+                'Join a team, workplace or store with a six-digit code',
+                'Team leaderboard throughout the month',
+                'Shareable challenge pages',
+                'In-app donations to the Go Girls Foundation',
+            ],
+            // TODO(content): tech stack used.
+            tools: [],
+            link: 'https://apps.apple.com/us/app/go-girls/id6810083153',
+            linkLabel: 'View on the App Store',
+            secondaryLink: { href: 'https://www.gogirlsmove.org.au/', label: 'gogirlsmove.org.au' },
+        },
         {
             name: 'StartBrusa',
             image: '/work/startbrusa.png',
@@ -116,26 +137,6 @@ export const userData = {
             tools: ['React Native', 'TypeScript', 'Expo', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
             link: 'https://www.helpcar.me/',
             linkLabel: 'Visit helpcar.me',
-        },
-        {
-            name: 'Go Girls MOVE',
-            // TODO(content): add a cover image (e.g. /work/go-girls.png, ~1200×600) and its imageAlt.
-            platform: 'iOS app',
-            summary: 'Fitness-tracking app for Go Girls MOVE, a global movement challenge raising funds for the Go Girls Foundation, which supports women at risk.',
-            // Features as listed on the App Store.
-            // TODO(content): confirm these are what you built, and add anything else you did (backend, web, etc.).
-            highlights: [
-                'Personal distance goals with progress tracking',
-                'Join a team, workplace or store with a six-digit code',
-                'Team leaderboard throughout the month',
-                'Shareable challenge pages',
-                'In-app donations to the Go Girls Foundation',
-            ],
-            // TODO(content): tech stack used.
-            tools: [],
-            link: 'https://apps.apple.com/us/app/go-girls/id6810083153',
-            linkLabel: 'View on the App Store',
-            secondaryLink: { href: 'https://www.gogirlsmove.org.au/', label: 'gogirlsmove.org.au' },
         },
     ] as Project[],
 

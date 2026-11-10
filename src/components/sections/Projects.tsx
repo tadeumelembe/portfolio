@@ -14,7 +14,8 @@ export default function Projects() {
         <ul className="grid gap-6 md:grid-cols-2 lg:gap-8">
           {userData.projects.map((project, index) => (
             <li key={project.name} className="flex">
-              <ProjectCard project={project} priority={index === 0} />
+              {/* Preload images in the first row (two columns on desktop). */}
+              <ProjectCard project={project} priority={index < 2} />
             </li>
           ))}
         </ul>
